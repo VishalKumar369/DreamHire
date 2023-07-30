@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  max-width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e74c3c;
+}
+
+.cta button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: #c0392b;
+}
+
+/* Hero Styles */
+.hero {
+  background-image: url('https://www.data-vault.co.uk/wp-content/uploads/2018/05/blog_image_1100x619_svc.jpg'); 
+  background-color: #333;
+  /* opacity: 0.1; */
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  /* background-position: center; */
+  padding: 100px 0;
+}
+
+.overlay-img{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* Roles Styles */
+.roles {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.roles h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.role-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  max-width: 300px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials Styles */
+.testimonials {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.testimonials h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  max-width: 300px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-size: 18px;
+}
+
+
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo img {
+    max-width: 80px;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .roles .role-card,
+  .testimonials .testimonial-card {
+    max-width: 100%;
   }
 }
